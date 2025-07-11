@@ -69,7 +69,6 @@ function Nav(){
         else{
         setNewListData(listingData.filter((list) => list.category == cate));
         }
-        toast.success("Category Set Successfully");
 
 
     }
