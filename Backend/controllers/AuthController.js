@@ -28,8 +28,8 @@ const signUp = async(req, res) => {
 
         res.cookie("token", token,{
             httpOnly: true,
-            secure: true,
-            sameSite : "None",
+            sameSite: isProduction ? "None" : "Lax",
+            secure: isProduction, 
             maxAge : 7*24*60*60*1000,
         })
 
@@ -63,8 +63,8 @@ const login = async(req, res) =>{
 
         res.cookie("token", token, {
             httpOnly : true,
-            secure: true,
-            sameSite : "None",
+            sameSite: isProduction ? "None" : "Lax",
+            secure: isProduction, 
             maxAge : 7*24*60*60*1000,
         })
         return res.status(200).json(user);
