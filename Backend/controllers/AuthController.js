@@ -5,6 +5,9 @@ const genToken = require("../configuration/token.js");
 
 const bcrypt = require("bcryptjs");
 
+const isProduction = process.env.NODE_ENV === "production";
+
+
 // SignUp Authuntication 
 
 const signUp = async(req, res) => {
