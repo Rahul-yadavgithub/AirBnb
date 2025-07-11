@@ -3,7 +3,7 @@ import { createContext , useState} from "react";
 export const AuthDataContext = createContext();
 
 export function AuthProvider({ children }) {
-    const serverUrl = "http://localhost:8000";
+    const serverUrl = "https://airbnb-backend-4jep.onrender.com";
 
     let [loading , setLoading] = useState(false);
 
